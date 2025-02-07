@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="dec()">-</button>
+    <h1 id="val">0</h1>
+    <button onclick="inc()">+</button>
+    <script>
+        var v=document.getElementById("val").innerHTML
+       
+function dec(){
+  v--;
+  document.getElementById("val").innerHTML=v;
+}
+function inc(){
+  v++;
+  document.getElementById("val").innerHTML=v;
+}
+    </script>
+</body>
+</html>
