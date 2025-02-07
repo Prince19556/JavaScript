@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #subDiv{
+            margin-top:50px;
+        }
+        button{
+            margin-top:50px;
+            margin-left:3px;
+            width:75px;
+            height:30px;
+            background-color:blue;
+            font-style:italic;
+            font-size:20px;
+            color:white;
+            border:2px solid black;
+            border-radius:2px;
+
+        }
+        #mainDiv{
+            margin-top: 15%;
+            border:3px solid black;
+            width:300px;
+            height: 250px;
+            box-shadow:1px 2px 4px blue;
+        }
+        span{
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body><center>
+    <div id="mainDiv">
+        <div id="subDiv">
+            <span id="hr">0 hrs : </span>
+            <span id="min">0 mins : </span>
+            <span id="sec">0 sec</span>
+        </div>
+        <button onclick="start()">Start</button>
+        <button onclick="stop()">Stop</button>
+        <button onclick="reset()">Reset</button>
+    </div>
+</center>
+   <script>
+    var count=0;
+    var h=0,m=0,s=0
+    function start(){
+    secInterval=setInterval(()=>{
+        s++
+        if(s==60){
+            m++
+            s=0;
+        }
+        if(m==60){
+            h++;
+            m=0
+        }
+        console.log(m+" "+s)
+        document.getElementById("hr").innerHTML=h+" hrs :"
+        document.getElementById("min").innerHTML=m+" mins : "
+        document.getElementById("sec").innerHTML=s+" secs"
+    },1000)
+}
+function stop(){
+    if(count%2==0){
+    clearInterval(secInterval);
+    document.getElementById("hr").innerHTML=h+" hrs :"
+    document.getElementById("min").innerHTML=m+" mins : "
+    document.getElementById("sec").innerHTML=s+" secs"
+    count++
+    }else{
+        clearInterval(secInterval);
+        start()
+        count++
+    }
+}
+function reset(){
+    clearInterval(secInterval);
+    h=0,m=0,s=0
+    document.getElementById("hr").innerHTML=h+" hrs :"
+    document.getElementById("min").innerHTML=m+" mins : "
+    document.getElementById("sec").innerHTML=s+" secs"
+}
+   </script>
+</body>
+</html>
