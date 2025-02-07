@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ const MaxPrice = async () => {
+            try {
+                const response = await fetch("https://dummyjson.com/products");
+                if (!response.ok) {
+                    throw new Error("Failed to fetch data. Check the API URL.");
+                }
+
+                const data = await response.json();
+                const prod = data.products;
+
+                let maxPrice = prod[0]; 
+
+                for (let i = 1; i < prod.length; i++) {
+                    if (prod[i].price > maxPrice.price) {
+                        maxPrice = prod[i];
+                    }
+                }
+                console.log("Name:", maxPrice.title);
+                console.log("Price:", maxPrice.price);
+            } catch (error) {
+                console.error("Error:", error);
+            }
+        };
+
+        MaxPrice();
+    </script>
+</body>
+</html>
