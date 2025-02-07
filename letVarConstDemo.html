@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function varDemo(){
+            console.log("var: before creation: "+x)
+            x=1
+            console.log("Before creation but vakue assigned"+x)
+            var x=2
+            console.log("After creation: "+x)
+            x=3;
+            console.log("Reassiging value: "+x)
+        }
+        function letDemo(){
+          //  console.log("var: before creation: "+y)
+          //  y=11
+          //  console.log("Before creation but vakue assigned"+y)
+            let y=22
+            console.log("After creation: "+y)
+            y=33
+            console.log("Reassiging value: "+y)
+        }
+        function constDemo(){
+        //    console.log("var: before creation: "+z)
+        //    z=111
+        //    console.log("Before creation but vakue assigned"+z)
+            const z=222
+            console.log("After creation: "+z)
+           // z=333;
+            console.log("Reassiging value: "+z)
+        }
+    </script>
+</head>
+<body>
+    <button onclick="varDemo()">Var</button>
+    <button onclick="letDemo()">Let</button>
+    <button onclick="constDemo()">Const</button>
+</body>
+</html>
+ 
+<!-- console.log("var: before creation: "+x); // undefined
+            x=15; //HOISTING
+            console.log("var :before creation but value assigned : "+x); //15
+            var x=10;
+            console.log("var :aFTER CREATION :"+x);//10
+            x=20;
+            console.log("reIntilisation: :"+x);//10 -->
+           
