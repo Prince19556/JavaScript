@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[99,98,97,96,95,]
+        console.log(arr)
+        console.log(arr.length)
+        console.log(arr.sort())
+        console.log(arr.reverse())
+        console.log(arr.toString())
+        console.log(arr.push(100))
+        console.log("After Pushing 100 "+arr)
+        console.log("Popping element from arr "+arr.pop())
+        console.log("After popping "+arr)
+        console.log(arr.unshift(100))
+        console.log(arr)
+        console.log(arr.shift(94))
+        console.log(arr)
+        arr[0]=556
+        console.log(arr)
+        arr.push(515)
+        console.log(arr.reverse())
+        console.log("Befor sorting "+arr)
+        console.log("After sorting "+arr.sort())
+        console.log("After sorting with function "+arr.sort(function(a,b){return a-b;}))
+        console.log("Befor reversing "+arr)
+        console.log("After reversing with function "+arr.reverse(function(a,b){return b-a;}))
+        console.log(arr.toSorted())
+        console.log(arr.toReversed())
+
+    </script>
+</body>
+</html>
+
+
+<!-- console.log(num);
+        console.log("length of array : "+num.length);
+        console.log("sort  : "+num.sort());
+        console.log("Reverse () : "+num.reverse());
+        console.log("toString : "+num.toString());
+        console.log ("push : "+num.push(3));//last
+        console.log("after push 3 in array"+num);
+        console.log("pop element : "+num.pop());//last
+        console.log("after pop the last element from array"+num);
+        console.log("unshift 15 "+num.unshift(15));//front
+        console.log("after unshift 15 in array"+num);
+        console.log("shift element from the array "+num.shift());//front
+        console.log("after shift from the  array"+num);
+        num[0]=18; //overlaping or replace the element with new one.
+       console.log("after adding element  18 at 0th index in array"+num);
+       num.push(100);
+       console.log("before sorting : "+num);
+      console.log("after sorting "+num.sort());
+ 
+      console.log("after sorting with function "+num.sort(function(a,b){return a-b;})); -->
