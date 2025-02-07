@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="addition()">
+            Add Two number
+    </button>
+    <button onclick="simpleInt()">
+        simple Interest
+</button>
+    <script>
+        // function addition(){
+        //     var a=prompt("Enter value of A:")
+        //     var b=prompt("Enter value of B:")
+        //     var c=a+b
+        //     console.log(c)
+        //     document.write(c)
+        // }
+        function addition(){
+            var a=123
+            var b=456
+            console.log(a+" + "+b+" = "+(a+b));
+        //    document.write(a+" + "+b+" = "+(a+b));
+        }
+        function simpleInt(){
+           var p=1000
+           var r=10
+           var t=2
+           var s=(p*r*t)/100
+           console.log("Simple Interest of "+p+" for rate of interest "+r+"% in time of "+t+" is "+s+". Total amount "+(s+p));
+        }
+    </script>
+</body>
+</html>
