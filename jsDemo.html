@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Java Script Demo</h1>
+    Welcome!<p id="uname"></p>
+    <p>Click Me</p>
+    <button onclick="greet()">Click</button>
+    <script>
+        function greet(){
+            alert("Hi, Hello World Back.")
+            var name=prompt("Enter Your good Name plz:")
+            console.log(name)
+            document.getElementById("uname").textContent=name
+        }
+    </script>
+</body>
+</html>
+ 
