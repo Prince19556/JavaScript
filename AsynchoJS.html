@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #b1{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1"></p>
+    <button id="b1">Login Plz</button>
+    <script>
+        // f1()
+        // console.log("Before Fun creation value of a :"+a)
+        // function f1(){
+        //     a=5;
+        // }
+        // console.log("Value of a : "+a)
+
+        function outer(){
+            var b=10
+            function inner(){
+                console.log("Value of b :"+b);
+            }
+            return inner();
+        }
+        outer();
+        console.log("Begin")
+        setTimeout(()=>{
+            console.log("Executed after 10 seconds");
+            const btn=document.getElementById("b1")
+            btn.style.display='block';
+            clearInterval(intervalId)
+        },5000);
+        console.log("End")
+        var count=1;
+        const intervalId=setInterval(()=>{
+            console.log("Count : "+count);
+            count++;
+        },1000)
+
+        let myPromise = new Promise(function(resolve,reject)
+        {
+            let x=0;
+            if(x==0){
+                resolve("ok")
+            }else{
+                reject("error")
+            }
+        }
+    );
+    myPromise.then(
+        function(value){f1(value);console.log(value);},
+        function(error){f1(error);console.log(error);}
+    );
+    function f1(msg){
+        document.getElementById("p1").innerHTML=msg;
+    }
+    </script>
+</body>
+</html>
